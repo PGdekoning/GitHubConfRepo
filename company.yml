@@ -1,4 +1,4 @@
---- 
 spring:
-  profiles: cloud
-message: "Peter de Koning!!!!"
+    profiles: cloud
+
+message: This is a company-specific cloud message.
