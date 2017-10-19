@@ -1,13 +1,12 @@
-spring:
-  cloud:
-    config:
-      server:
-        git:
-          uri:${vcap.services.config-repo.credentials.uri}
-          # ONLY include username and pwd if the repo is private
-          #username:
-          #password:
-security:
-  user:
+--- 
+info: 
+  description: "Training configuration repo"
+security: 
+  user: 
     name: config-server
-    password: config-server		  
+    password: config-server
+spring: 
+  cloud: 
+    config: 
+      server: 
+        git: "uri:${vcap.services.config-repo-service.credentials.uri}"
