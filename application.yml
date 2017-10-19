@@ -1,17 +1,17 @@
-info: 
-  description: Training configuration repo
+info:
+  description: Some sample description from the Application YML
   message: A default message given by Application.YML
-
-eureka: 
-  client: 
-    serviceUrl: 
-      defaultZone: http://eureka:eureka@eureka-server-unenfiladed-hedonist.cfapps.io/eureka
-
---- 
-
-spring:
-  profile: cloud
+ 
 eureka:
-  instance:
-    hostname: ${vcap.application.uris[0]}
-    eureka.instance.nonSecurePort: 80
+  client:
+    serviceUrl:
+      defaultZone: http://eureka:eureka@eureka-server-unenfiladed-hedonist.cfapps.io/eureka
+      
+---
+ 
+spring:
+    profile: cloud
+eureka:
+    instance:
+        hostname: ${vcap.application.uris[0]}
+        nonSecurePort: 80
