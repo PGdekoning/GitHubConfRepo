@@ -1,3 +1,5 @@
+--- 
+
 info: 
   description: "Training configuration repo"
 
@@ -5,13 +7,9 @@ eureka:
   client: 
     serviceUrl: 
       defaultZone: https://eureka:eureka@eureka-server-unenfiladed-hedonist.cfapps.io/eureka
-
---- 
-
-spring:
-  profile: cloud
-
-eureka:
   instance:
     hostname: ${vcap.application.uris[0]}
     eureka.instance.nonSecurePort: 80
+
+spring:
+  profile: cloud  
