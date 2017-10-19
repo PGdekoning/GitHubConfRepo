@@ -1,12 +1,17 @@
---- 
 info: 
   description: "Training configuration repo"
-security: 
-  user: 
-    name: config-server
-    password: config-server
+
+eureka: 
+  client: 
+    serviceUrl: 
+      defaultZone: "https://eureka:eureka@eureka-server-unenfiladed-hedonist.cfapps.io//eureka"
+
+--- 
+
 spring: 
-  cloud: 
-    config: 
-      server: 
-        git: "uri:${vcap.services.config-repo-service.credentials.uri}"
+ profile: cloud:
+ 
+ eureka:  
+      instance:
+      hostname: ${vcap.application.uris[0]}
+      eureka.instance.nonSecurePort: 80
