@@ -5,7 +5,7 @@ info:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://eureka:eureka@eureka-server-unenfiladed-hedonist.cfapps.io/eureka
+      defaultZone: http://Eureka:Eureka@eureka-server-unenfiladed-hedonist.cfapps.io/eureka
       
 ---
  
